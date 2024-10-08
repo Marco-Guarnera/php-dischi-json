@@ -1,15 +1,7 @@
 <?php
 
-// Fase di preparazione
-
-// Variabili
-// Strutture dati
-// Funzioni
-
-// Fase di raccolta dati
-// Fase di elaborazione
-// Fase di produzione
-
-echo 'Test';
+$data = file_get_contents('./data-structure.json');
+header('Content-Type: application/json');
+echo $data;
 
 ?>
