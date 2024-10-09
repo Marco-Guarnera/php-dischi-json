@@ -7,7 +7,7 @@ const app = Vue.createApp({
     methods: {
         getDataList() {
             axios.get("./server/server.php").then(response => {
-                console.log(response);
+                this.dataList = response.data;
             }).catch(error => {
                 console.log(error);
             });

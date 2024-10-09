@@ -31,10 +31,19 @@
     </header>
     <!-- Main -->
     <main>
-        <div id="app">
-            <ul>
-                <li></li>
-            </ul>
+        <div id="app" class="container">
+            <div class="row g-3 mb-3">
+                <div class="col-4" v-for="item in dataList">
+                    <div class="card">
+                        <img class="card-img-top" :src="item.poster" :alt="item.title">
+                        <div class="card-body text-center">
+                            <h5 class="card-title m-0" v-text="item.title"></h5>
+                            <div class="card-text" v-text="item.author"></div>
+                            <time class="card-text" :datetime="item.year" v-text="item.year"></time>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </body>
