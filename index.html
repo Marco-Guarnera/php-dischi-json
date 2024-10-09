@@ -33,7 +33,7 @@
     <main>
         <div id="app" class="container">
             <div class="row g-3 mb-3">
-                <div class="col-4" v-for="item in dataList">
+                <div class="col-4" v-for="(item, index) in dataList" :key="index">
                     <div class="card">
                         <img class="card-img-top" :src="item.poster" :alt="item.title">
                         <div class="card-body text-center">
